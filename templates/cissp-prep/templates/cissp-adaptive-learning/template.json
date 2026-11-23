@@ -1,0 +1,80 @@
+{
+  "template_id": "cissp_adaptive_learning",
+  "name": "CISSP \u00b7 Adaptive Learning Coordinator",
+  "version": "1.0.0",
+  "team_size": 2,
+  "study_format": "short",
+  "ai_chat_enabled": false,
+  "group_communication_allowed": true,
+  "timing": {
+    "enabled": false
+  },
+  "privacy": {
+    "encrypt_participant_contacts": true
+  },
+  "staffing": {
+    "allowed_sizes": [
+      2,
+      1
+    ],
+    "human_seat_order": [
+      1,
+      2
+    ],
+    "vacant_seat": "pool",
+    "start": {
+      "min_humans": 1
+    },
+    "desk_teams": {
+      "operator_seat": 1,
+      "session_seat": 2
+    }
+  },
+  "lens_assignments": [
+    {
+      "member_slot": 1,
+      "lens": "Learner",
+      "goal": "Practice CISSP reasoning and answer independently"
+    },
+    {
+      "member_slot": 2,
+      "lens": "Local coordinator",
+      "goal": "Teach, assess and adapt using durable local memory"
+    }
+  ],
+  "stages_dir": "stages/",
+  "materials_dir": "materials/",
+  "skills_dir": "skills/",
+  "materials": [
+    {
+      "name": "Learning workflow",
+      "path": "materials/workflow.md",
+      "mime": "text/markdown",
+      "visibility": "all_stages",
+      "description": "Learning loop, learner decisions, and session controls"
+    }
+  ],
+  "metadata": {
+    "domain": "cybersecurity",
+    "difficulty": "intermediate",
+    "duration_minutes": 120,
+    "scoring_type": "none",
+    "research_ready": false,
+    "verified_by_skillsimm": false,
+    "tags": [
+      "cissp",
+      "adaptive-learning",
+      "session-desk",
+      "local-coordinator"
+    ],
+    "team_size": {
+      "min": 1,
+      "max": 2
+    },
+    "learning_goals": [
+      "Apply all eight CISSP domains",
+      "Improve weak topics through evidence-based review",
+      "Preserve learning progress across AI model changes"
+    ]
+  }
+}

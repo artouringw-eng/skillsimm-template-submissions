@@ -1,0 +1,25 @@
+# Copy to config.toml. Set model IDs available to your API accounts.
+# Credentials are read from environment variables, never from this file.
+[models.teacher]
+provider = "openai"
+model_env = "OPENAI_MODEL"
+key_env = "OPENAI_API_KEY"
+
+[models.reviewer]
+provider = "anthropic"
+model_env = "ANTHROPIC_MODEL"
+key_env = "ANTHROPIC_API_KEY"
+
+[models.planner]
+provider = "openai"
+model_env = "OPENAI_MODEL"
+key_env = "OPENAI_API_KEY"
+
+[learning]
+topic_questions = 8
+weak_questions = 2
+warmup_questions = 3
+weekday_minutes = 180
+weekend_minutes = 300
+timeout_seconds = 90
+max_output_tokens = 6000
