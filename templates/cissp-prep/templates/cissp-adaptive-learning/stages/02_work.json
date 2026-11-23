@@ -1,0 +1,70 @@
+{
+  "stage_index": 1,
+  "stage_id": "work",
+  "name": "Learn, assess and adapt",
+  "description": "Use team chat. Send /end before completing the outcome.",
+  "dependencies": [
+    "open"
+  ],
+  "tasks": [
+    {
+      "task_id": "session_log",
+      "participant_slot": 2,
+      "name": "Session log",
+      "type": "human",
+      "role": "local_session",
+      "hitl_prompt": "Session log",
+      "field_schema": {
+        "summary": {
+          "type": "textarea",
+          "label": "Learning progress and next review",
+          "required": true
+        }
+      },
+      "required_fields": [
+        "summary"
+      ],
+      "review_type": "none",
+      "requires_review": false,
+      "evaluation_point": false,
+      "evaluation_weight": 0,
+      "ui_options": {
+        "require_rationale": false,
+        "show_confidence": false
+      }
+    },
+    {
+      "task_id": "session_end",
+      "participant_slot": 1,
+      "name": "Close learning session",
+      "type": "human",
+      "role": "learner",
+      "hitl_prompt": "Close learning session",
+      "field_schema": {
+        "outcome": {
+          "type": "textarea",
+          "label": "What you learned",
+          "required": true
+        },
+        "remaining": {
+          "type": "textarea",
+          "label": "What needs more practice",
+          "required": true
+        }
+      },
+      "required_fields": [
+        "outcome",
+        "remaining"
+      ],
+      "review_type": "none",
+      "requires_review": false,
+      "evaluation_point": false,
+      "evaluation_weight": 0,
+      "ui_options": {
+        "require_rationale": false,
+        "show_confidence": false
+      }
+    }
+  ],
+  "estimated_duration_minutes": 115
+}

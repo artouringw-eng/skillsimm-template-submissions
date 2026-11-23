@@ -1,0 +1,48 @@
+{
+  "stage_index": 0,
+  "stage_id": "open",
+  "name": "Open learning session",
+  "description": "Select the local learning workspace and session goal.",
+  "dependencies": [],
+  "tasks": [
+    {
+      "task_id": "session_goal",
+      "participant_slot": 1,
+      "name": "Learning goal and workspace",
+      "type": "human",
+      "role": "learner",
+      "hitl_prompt": "Learning goal and workspace",
+      "field_schema": {
+        "goal": {
+          "type": "textarea",
+          "label": "Today's learning goal",
+          "required": true
+        },
+        "folder": {
+          "type": "textarea",
+          "label": "Local coordinator workspace (no credentials)",
+          "required": true
+        },
+        "approvals": {
+          "type": "textarea",
+          "label": "Session preferences and constraints",
+          "required": true
+        }
+      },
+      "required_fields": [
+        "goal",
+        "folder",
+        "approvals"
+      ],
+      "review_type": "none",
+      "requires_review": false,
+      "evaluation_point": false,
+      "evaluation_weight": 0,
+      "ui_options": {
+        "require_rationale": false,
+        "show_confidence": false
+      }
+    }
+  ],
+  "estimated_duration_minutes": 5
+}
